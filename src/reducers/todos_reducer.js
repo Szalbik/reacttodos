@@ -1,20 +1,7 @@
 import ADD_TODO from '../actions';
 
-const todo = (state, action) => {
-  console.log('Reducer text: ',action.text);
-  switch (action.type) {
-    case ADD_TODO:
-
-      return {
-        id: action.id,
-        text: action.text
-      };
-    default:
-      return state;
-  }
-}
-
 const todos = (state = [], action) => {
+  console.log('Reducer text: ',action);
   switch (action.type) {
     case ADD_TODO:
       return [
